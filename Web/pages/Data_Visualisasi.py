@@ -7,7 +7,7 @@ import pandas as pd
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # title of the app
-st.title("Website Visualisasi Prediksi Data ISPU")
+st.title("Website Visualisasi Prediksi dan Forecasting Data ISPU")
 
 # Add a sidebar
 st.sidebar.subheader("Visualization Settings")

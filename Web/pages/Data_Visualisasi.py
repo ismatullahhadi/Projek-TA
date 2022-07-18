@@ -3,6 +3,7 @@ import streamlit as st
 import plotly_express as px
 import pandas as pd
 # from torch import layout
+from pathlib import Path
 
 # configuration
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -35,65 +36,65 @@ file_select = st.sidebar.selectbox(
 global df
 
 if file_select == "Prediksi DKI1 PM10":
-    uploaded_file = "./files/prediction/DKI1_01_PM10.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI1_01_PM10.xlsx"
 elif file_select == "Prediksi DKI1 SO2":
-    uploaded_file = "./files/prediction/DKI1_02_SO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI1_02_SO2.xlsx"
 elif file_select == "Prediksi DKI1 CO":
-    uploaded_file = "./files/prediction/DKI1_03_CO.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI1_03_CO.xlsx"
 elif file_select == "Prediksi DKI1 O3":
-    uploaded_file = "./files/prediction/DKI1_04_O3.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI1_04_O3.xlsx"
 elif file_select == "Prediksi DKI1 NO2":
-    uploaded_file = "./files/prediction/DKI1_05_NO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI1_05_NO2.xlsx"
 elif file_select == "Forecasting DKI1":
-    uploaded_file = "./files/forecasting/DKI1_Forecasting.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/forecasting/DKI1_Forecasting.xlsx"
 if file_select == "Prediksi DKI2 PM10":
-    uploaded_file = "./files/prediction/DKI2_01_PM10.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI2_01_PM10.xlsx"
 elif file_select == "Prediksi DKI2 SO2":
-    uploaded_file = "./files/prediction/DKI2_02_SO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI2_02_SO2.xlsx"
 elif file_select == "Prediksi DKI2 CO":
-    uploaded_file = "./files/prediction/DKI2_03_CO.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI2_03_CO.xlsx"
 elif file_select == "Prediksi DKI2 O3":
-    uploaded_file = "./files/prediction/DKI2_04_O3.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI2_04_O3.xlsx"
 elif file_select == "Prediksi DKI2 NO2":
-    uploaded_file = "./files/prediction/DKI2_05_NO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI2_05_NO2.xlsx"
 elif file_select == "Forecasting DKI2":
-    uploaded_file = "./files/forecasting/DKI2_Forecasting.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/forecasting/DKI2_Forecasting.xlsx"
 if file_select == "Prediksi DKI3 PM10":
-    uploaded_file = "./files/prediction/DKI3_01_PM10.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI3_01_PM10.xlsx"
 elif file_select == "Prediksi DKI3 SO2":
-    uploaded_file = "./files/prediction/DKI3_02_SO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI3_02_SO2.xlsx"
 elif file_select == "Prediksi DKI3 CO":
-    uploaded_file = "./files/prediction/DKI3_03_CO.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI3_03_CO.xlsx"
 elif file_select == "Prediksi DKI3 O3":
-    uploaded_file = "./files/prediction/DKI3_04_O3.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI3_04_O3.xlsx"
 elif file_select == "Prediksi DKI3 NO2":
-    uploaded_file = "./files/prediction/DKI3_05_NO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI3_05_NO2.xlsx"
 elif file_select == "Forecasting DKI3":
-    uploaded_file = "./files/forecasting/DKI3_Forecasting.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/forecasting/DKI3_Forecasting.xlsx"
 if file_select == "Prediksi DKI4 PM10":
-    uploaded_file = "./files/prediction/DKI4_01_PM10.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI4_01_PM10.xlsx"
 elif file_select == "Prediksi DKI4 SO2":
-    uploaded_file = "./files/prediction/DKI4_02_SO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI4_02_SO2.xlsx"
 elif file_select == "Prediksi DKI4 CO":
-    uploaded_file = "./files/prediction/DKI4_03_CO.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI4_03_CO.xlsx"
 elif file_select == "Prediksi DKI4 O3":
-    uploaded_file = "./files/prediction/DKI4_04_O3.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI4_04_O3.xlsx"
 elif file_select == "Prediksi DKI4 NO2":
-    uploaded_file = "./files/prediction/DKI4_05_NO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI4_05_NO2.xlsx"
 elif file_select == "Forecasting DKI4":
-    uploaded_file = "./files/forecasting/DKI4_Forecasting.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/forecasting/DKI4_Forecasting.xlsx"
 if file_select == "Prediksi DKI5 PM10":
-    uploaded_file = "./files/prediction/DKI5_01_PM10.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI5_01_PM10.xlsx"
 elif file_select == "Prediksi DKI5 SO2":
-    uploaded_file = "./files/prediction/DKI5_02_SO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI5_02_SO2.xlsx"
 elif file_select == "Prediksi DKI5 CO":
-    uploaded_file = "./files/prediction/DKI5_03_CO.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI5_03_CO.xlsx"
 elif file_select == "Prediksi DKI5 O3":
-    uploaded_file = "./files/prediction/DKI5_04_O3.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI5_04_O3.xlsx"
 elif file_select == "Prediksi DKI5 NO2":
-    uploaded_file = "./files/prediction/DKI5_05_NO2.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/prediction/DKI5_05_NO2.xlsx"
 elif file_select == "Forecasting DKI5":
-    uploaded_file = "./files/forecasting/DKI5_Forecasting.xlsx"
+    uploaded_file = Path(__file__).parents[1] / "Web/files/forecasting/DKI5_Forecasting.xlsx"
 
 # # Setup file upload
 # uploaded_file = st.sidebar.file_uploader(

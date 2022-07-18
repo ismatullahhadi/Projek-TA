@@ -36,7 +36,7 @@ st.markdown(
 )
 
 # tabel_kategori_ispu = Image.open('images/Tabel_kategori_indeks_ISPU.png')
-tabel_kategori_ispu = Image.open(Path(__file__).parents[2] / 'images/Tabel_kategori_indeks_ISPU.png')
+tabel_kategori_ispu = Image.open(Path(__file__).parents[1] / 'Web/images/Tabel_kategori_indeks_ISPU.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 
@@ -59,7 +59,8 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-konversi_nilai_konsentrasi = Image.open('./images/Konversi_nilai_konsentrasi.png')
+# konversi_nilai_konsentrasi = Image.open('./images/Konversi_nilai_konsentrasi.png')
+konversi_nilai_konsentrasi = Image.open(Path(__file__).parents[1] / 'Web/images/Konversi_nilai_konsentrasi.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 
@@ -81,7 +82,8 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-rumus_ISPU = Image.open('./images/rumus_ISPU.png')
+# rumus_ISPU = Image.open('./images/rumus_ISPU.png')
+rumus_ISPU = Image.open(Path(__file__).parents[1] / 'Web/images/rumus_ISPU.png')
 
 col1, col2, col3 = st.columns([1,1,1])
 

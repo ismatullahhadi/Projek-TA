@@ -1,8 +1,8 @@
-from sqlalchemy import column
+# from sqlalchemy import column
 import streamlit as st
 import plotly_express as px
 import pandas as pd
-from torch import layout
+# from torch import layout
 
 # configuration
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -140,6 +140,7 @@ if chart_select == 'Lineplots':
         color_value = st.sidebar.selectbox("Color", options=non_numeric_columns)
         # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
         plot = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
+        
         st.plotly_chart(plot)
     except Exception as e:
         print(e)

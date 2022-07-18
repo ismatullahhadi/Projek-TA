@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from xarray import align
+# from xarray import align
 
 st.set_page_config(
     page_title="Halaman Utama",

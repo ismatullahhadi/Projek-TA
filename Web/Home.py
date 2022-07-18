@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 # from xarray import align
-
+from pathlib import Path
 
 st.set_page_config(
     page_title="Halaman Utama",
@@ -35,7 +35,8 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-tabel_kategori_ispu = Image.open('images/Tabel_kategori_indeks_ISPU.png')
+# tabel_kategori_ispu = Image.open('images/Tabel_kategori_indeks_ISPU.png')
+tabel_kategori_ispu = Image.open(Path(__file__).parents[1] / 'images/Tabel_kategori_indeks_ISPU.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 

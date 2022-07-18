@@ -1,1 +1,2 @@
 plotly_express==0.4.0
+openpyxl==3.0.10

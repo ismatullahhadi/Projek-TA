@@ -36,7 +36,7 @@ file_select = st.sidebar.selectbox(
 global df
 
 if file_select == "Prediksi DKI1 PM10":
-    uploaded_file = Path(__file__).parents[1] / "/files/prediction/DKI1_01_PM10.xlsx"
+    uploaded_file = Path(__file__).parents[1] / 'Web/files/prediction/DKI1_01_PM10.xlsx'
 elif file_select == "Prediksi DKI1 SO2":
     uploaded_file = Path(__file__).parents[1] / "/files/prediction/DKI1_02_SO2.xlsx"
 elif file_select == "Prediksi DKI1 CO":

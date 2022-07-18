@@ -36,7 +36,7 @@ st.markdown(
 )
 
 # tabel_kategori_ispu = Image.open('images/Tabel_kategori_indeks_ISPU.png')
-tabel_kategori_ispu = Image.open(Path(__file__).parents[2] / 'Web/images/Tabel_kategori_indeks_ISPU.png')
+tabel_kategori_ispu = Image.open(Path(__file__).parents[2] / 'images/Tabel_kategori_indeks_ISPU.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 

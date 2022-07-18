@@ -10,7 +10,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Judul Halaman
 st.set_page_config(
-    page_title="Regresi dan Klasifikasi Data ISPU",
+    page_title="Regresi Data ISPU",
     page_icon="📈",
 )
 
@@ -37,7 +37,6 @@ global df
 
 if file_select == "Prediksi DKI1 PM10":
     uploaded_file = Path(__file__).parents[2] / 'Web/files/prediction/DKI1_01_PM10.xlsx'
-    print(uploaded_file)
 elif file_select == "Prediksi DKI1 SO2":
     uploaded_file = Path(__file__).parents[2] / 'Web/files/prediction/DKI1_02_SO2.xlsx'
 elif file_select == "Prediksi DKI1 CO":

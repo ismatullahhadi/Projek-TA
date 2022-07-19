@@ -155,8 +155,8 @@ if chart_select == 'Lineplots':
         area = {"Tanggal":df["Tanggal"], "Baik":50}
         df_area = pd.DataFrame(area)
         st.write(df_area)
-        plot2 = px.scatter(data_frame=df, x=x_values, y=y_values)
+        plot2 = px.area(data_frame=df_area, x=df_area.select_dtypes(['datetime']).columns, y=df_area.select_dtypes(['float', 'int']).columns)
         plot3 = go.Figure(data=plot1.data + plot2.data)
-        st.plotly_chart(plot3)
+        st.plotly_chart(plot2)
     except Exception as e:
         print(e)

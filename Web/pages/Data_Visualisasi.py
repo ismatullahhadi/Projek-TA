@@ -150,8 +150,8 @@ if chart_select == 'Lineplots':
             """
         )
         # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
-        plot = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
-        
-        st.plotly_chart(plot)
+        plot1 = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
+        plot2 = px.scatter(data_frame=df, x=x_values, y=y_values, color=color_value)
+        st.plotly_chart(plot2)
     except Exception as e:
         print(e)

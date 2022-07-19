@@ -36,6 +36,7 @@ file_select = st.sidebar.selectbox(
 
 global df
 
+# Pemilihan file prediksi atau forecasting
 if file_select == "Prediksi DKI1 PM10":
     uploaded_file = Path(__file__).parents[2] / 'Web/files/prediction/DKI1_01_PM10.xlsx'
 elif file_select == "Prediksi DKI1 SO2":

@@ -125,38 +125,31 @@ except Exception as e:
     print(e)
     st.write("Please upload file to the application.")
 
-# add a select widget to the side bar
-chart_select = st.sidebar.selectbox(
-    label="Select the chart type",
-    options=['Lineplots']
-)
-
 # Plotting
-if chart_select == 'Lineplots':
-    st.sidebar.subheader("Line Plot Settings")
-    try:
-        x_values = st.sidebar.selectbox('X axis', options=date_column)
-        y_values = st.sidebar.multiselect('Y axis', options=numeric_columns, default=numeric_columns)
-        # y1_values = st.sidebar.selectbox('Y1 axis', options=numeric_columns)
-        # y2_values = st.sidebar.selectbox('Y2 axis', options=numeric_columns)
-        color_values = st.sidebar.multiselect("Color", options=["Baik", "Sedang", "Tidak Sehat", "Sangat Tidak Sehat", "Berbahaya"], default=["Baik", "Sedang"])
-        st.sidebar.markdown(
-            """
-                Keterangan:\n
-                DKI1 :  Bundaran HI, Jakarta, DKI Jakarta\n
-                DKI2 :  Kelapa Gading, Jakarta, DKI Jakarta\n
-                DKI3 :  Jagakarsa, Jakarta, DKI Jakarta\n
-                DKI4 :  Lubang Buaya, Jakarta, DKI Jakarta\n
-                DKI5 :  Kebon Jeruk, Jakarta, DKI Jakarta
-            """
-        )
-        # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
-        plot1 = px.line(data_frame=df, x=x_values, y=y_values)
-        area = {"Tanggal":df["Tanggal"], "Baik":50, "Sedang":50, "Tidak Sehat":100, "Sangat Tidak Sehat":100, "Berbahaya":100}
-        df_area = pd.DataFrame(area)
-        # st.write(df_area)
-        plot2 = px.area(data_frame=df_area, x="Tanggal", y=color_values, color_discrete_sequence=["green", "blue", "orange", "red", "gray"])
-        plot3 = go.Figure(data=plot1.data + plot2.data)
-        st.plotly_chart(plot3)
-    except Exception as e:
-        print(e)
+st.sidebar.subheader("Line Plot Settings")
+try:
+    x_values = st.sidebar.selectbox('X axis', options=date_column)
+    y_values = st.sidebar.multiselect('Y axis', options=numeric_columns, default=numeric_columns)
+    # y1_values = st.sidebar.selectbox('Y1 axis', options=numeric_columns)
+    # y2_values = st.sidebar.selectbox('Y2 axis', options=numeric_columns)
+    color_values = st.sidebar.multiselect("Color", options=["Baik", "Sedang", "Tidak Sehat", "Sangat Tidak Sehat", "Berbahaya"], default=["Baik", "Sedang"])
+    st.sidebar.markdown(
+        """
+            Keterangan:\n
+            DKI1 :  Bundaran HI, Jakarta, DKI Jakarta\n
+            DKI2 :  Kelapa Gading, Jakarta, DKI Jakarta\n
+            DKI3 :  Jagakarsa, Jakarta, DKI Jakarta\n
+            DKI4 :  Lubang Buaya, Jakarta, DKI Jakarta\n
+            DKI5 :  Kebon Jeruk, Jakarta, DKI Jakarta
+        """
+    )
+    # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
+    plot1 = px.line(data_frame=df, x=x_values, y=y_values)
+    area = {"Tanggal":df["Tanggal"], "Baik":50, "Sedang":50, "Tidak Sehat":100, "Sangat Tidak Sehat":100, "Berbahaya":100}
+    df_area = pd.DataFrame(area)
+    # st.write(df_area)
+    plot2 = px.area(data_frame=df_area, x="Tanggal", y=color_values, color_discrete_sequence=["green", "blue", "orange", "red", "gray"])
+    plot3 = go.Figure(data=plot1.data + plot2.data)
+    st.plotly_chart(plot3)
+except Exception as e:
+    print(e)

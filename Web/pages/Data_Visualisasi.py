@@ -139,6 +139,12 @@ if chart_select == 'Lineplots':
         # y1_values = st.sidebar.selectbox('Y1 axis', options=numeric_columns)
         # y2_values = st.sidebar.selectbox('Y2 axis', options=numeric_columns)
         color_value = st.sidebar.selectbox("Color", options=non_numeric_columns)
+        st.sidebar.markdown(
+            """
+                Keterangan:\n
+                DKI1 :  Bundaran HI, Jakarta, DKI Jakarta
+            """
+        )
         # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
         plot = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
         

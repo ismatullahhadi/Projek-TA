@@ -152,6 +152,9 @@ if chart_select == 'Lineplots':
         )
         # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
         plot1 = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
+        area = {"Tanggal":df["Tanggal"]}
+        df_area = pd.DataFrame(area)
+        st.write(df_area)
         plot2 = px.scatter(data_frame=df, x=x_values, y=y_values)
         plot3 = go.Figure(data=plot1.data + plot2.data)
         st.plotly_chart(plot3)

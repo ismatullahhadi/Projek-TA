@@ -142,7 +142,11 @@ if chart_select == 'Lineplots':
         st.sidebar.markdown(
             """
                 Keterangan:\n
-                DKI1 :  Bundaran HI, Jakarta, DKI Jakarta
+                DKI1 :  Bundaran HI, Jakarta, DKI Jakarta\n
+                DKI2 :  Kelapa Gading, Jakarta, DKI Jakarta\n
+                DKI3 :  Jagakarsa, Jakarta, DKI Jakarta\n
+                DKI4 :  Lubang Buaya, Jakarta, DKI Jakarta\n
+                DKI5 :  Kebon Jeruk, Jakarta, DKI Jakarta
             """
         )
         # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)

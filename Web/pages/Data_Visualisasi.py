@@ -152,7 +152,7 @@ if chart_select == 'Lineplots':
         )
         # plot = px.line(data_frame=df, x=x_values, y=[y1_values, y2_values], color=color_value)
         plot1 = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
-        area = {"Tanggal":df["Tanggal"]}
+        area = {"Tanggal":df["Tanggal"], "Baik":50}
         df_area = pd.DataFrame(area)
         st.write(df_area)
         plot2 = px.scatter(data_frame=df, x=x_values, y=y_values)

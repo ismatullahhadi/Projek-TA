@@ -19,7 +19,7 @@ st.set_page_config(
 st.title("Website Visualisasi Prediksi dan Forecasting Data ISPU")
 
 # Add a sidebar
-st.sidebar.subheader("Visualization Settings")
+st.sidebar.subheader("Pengaturan Visualisasi")
 
 # Setup selecting csv file
 file_select = st.sidebar.selectbox(
@@ -126,13 +126,13 @@ except Exception as e:
     st.write("Please upload file to the application.")
 
 # Plotting
-st.sidebar.subheader("Line Plot Settings")
+st.sidebar.subheader("Pengaturan Plot Garis")
 try:
     x_values = st.sidebar.selectbox('X axis', options=date_column)
     y_values = st.sidebar.multiselect('Y axis', options=numeric_columns, default=numeric_columns)
     # y1_values = st.sidebar.selectbox('Y1 axis', options=numeric_columns)
     # y2_values = st.sidebar.selectbox('Y2 axis', options=numeric_columns)
-    color_values = st.sidebar.multiselect("Color", options=["Baik", "Sedang", "Tidak Sehat", "Sangat Tidak Sehat", "Berbahaya"], default=["Baik", "Sedang"])
+    color_values = st.sidebar.multiselect("Warna Kategori ISPU", options=["Baik", "Sedang", "Tidak Sehat", "Sangat Tidak Sehat", "Berbahaya"], default=["Baik", "Sedang"])
     st.sidebar.markdown(
         """
             Keterangan:\n

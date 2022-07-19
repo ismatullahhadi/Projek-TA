@@ -1,4 +1,5 @@
 # from sqlalchemy import column
+from matplotlib.pyplot import ylim
 import streamlit as st
 import plotly_express as px
 import pandas as pd
@@ -155,7 +156,7 @@ if chart_select == 'Lineplots':
         area = {"Tanggal":df["Tanggal"], "Baik":50, "Sedang":50, "Tidak Sehat":100, "Sangat Tidak Sehat":100, "Berbahaya":100}
         df_area = pd.DataFrame(area)
         # st.write(df_area)
-        plot2 = px.area(data_frame=df_area, x="Tanggal", y=["Baik", "Sedang", "Tidak Sehat", "Sangat Tidak Sehat", "Berbahaya"], color_discrete_sequence=["green", "blue", "orange", "red", "gray"])
+        plot2 = px.area(data_frame=df_area, x="Tanggal", y=["Baik", "Sedang", "Tidak Sehat"], color_discrete_sequence=["green", "blue", "orange"])
         plot3 = go.Figure(data=plot1.data + plot2.data)
         st.plotly_chart(plot3)
     except Exception as e:

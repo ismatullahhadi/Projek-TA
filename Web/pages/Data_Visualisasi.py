@@ -154,8 +154,8 @@ if chart_select == 'Lineplots':
         plot1 = px.line(data_frame=df, x=x_values, y=y_values, color=color_value)
         baik = 50
 
-        plot2 = px.area(data_frame=df, x=x_values, y=50, color=color_value)
+        plot2 = px.area(data_frame=df, x=x_values, y=50)
         plot3 = go.Figure(data=plot1.data + plot2.data)
-        st.plotly_chart(plot3)
+        st.plotly_chart(plot2)
     except Exception as e:
         print(e)

@@ -22,3 +22,5 @@ st.markdown(
         Website ini dibuat menggunakan streamlit.
     """
 )
+
+st.video('https://www.youtube.com/watch?v=GPDrZwxi338') 

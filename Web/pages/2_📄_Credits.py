@@ -9,9 +9,9 @@ st.set_page_config(
 
 st.markdown(
     """
-        Website ini dibuat oleh:
-            Ismatullah Hadi
-            Renaldy Eka Putra
+        Website ini dibuat oleh:\n
+            Ismatullah Hadi\n
+            Renaldy Eka Putra\n
 
         
     """

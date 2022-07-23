@@ -16,7 +16,7 @@ st.markdown(
 
         ### Terima kasih untuk dosen pembimbing yang telah membimbing dan memberikan saran atas projek TA ini:\n
         Dr. Meta Kallista, S.Si., M.Si.\n
-        Casi Setianingsih, S.T., M.T.\n
+        Casi Setianingsih, S.T., M.T.\n\n
 
 
         Website ini dibuat menggunakan streamlit.

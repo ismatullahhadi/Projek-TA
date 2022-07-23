@@ -1,6 +1,6 @@
 import streamlit as st
-from PIL import Image
-from pathlib import Path
+# from PIL import Image
+# from pathlib import Path
 
 st.set_page_config(
     page_title="Credits",
@@ -22,5 +22,3 @@ st.markdown(
         Website ini dibuat menggunakan streamlit.
     """
 )
-
-st.video('https://www.youtube.com/watch?v=GPDrZwxi338') 

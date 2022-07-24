@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # title of the app
-st.title("Website Visualisasi Prediksi dan Forecasting Data ISPU")
+st.title("Website Visualisasi Prediksi dan Forecasting Data ISPU dengan metode GPR")
 
 # Add a sidebar
 st.sidebar.subheader("Pengaturan Visualisasi")

@@ -11,7 +11,6 @@ st.markdown(
     """
         ### Website Projek TA ini dibuat oleh:\n
         Ismatullah Hadi\n
-        Renaldy Eka Putra\n
 
 
         ### Terima kasih untuk dosen pembimbing yang telah membimbing dan memberikan saran atas projek TA ini:\n

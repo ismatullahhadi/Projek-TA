@@ -7,7 +7,7 @@ from pathlib import Path
 import plotly.graph_objects as go
 
 # configuration
-st.set_option('deprecation.showfileUploaderEncoding', False)
+# st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Judul Halaman
 st.set_page_config(

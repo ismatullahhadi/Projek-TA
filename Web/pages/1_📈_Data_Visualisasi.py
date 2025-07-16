@@ -7,7 +7,7 @@ from pathlib import Path
 import plotly.graph_objects as go
 
 # configuration
-# st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Judul Halaman
 st.set_page_config(
@@ -111,7 +111,7 @@ if uploaded_file is not None:
         df = pd.read_excel(uploaded_file)
     except Exception as e:
         print(e)
-        df = pd.read_csv(uploaded_file, encoding='utf-8', engine='python')
+        df = pd.read_csv(uploaded_file)
 
 global numeric_columns
 global non_numeric_columns

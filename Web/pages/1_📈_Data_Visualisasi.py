@@ -111,7 +111,7 @@ if uploaded_file is not None:
         df = pd.read_excel(uploaded_file)
     except Exception as e:
         print(e)
-        df = pd.read_csv(uploaded_file, encoding='latin1')
+        df = pd.read_csv(uploaded_file, encoding='utf-8', errors='replace')
 
 global numeric_columns
 global non_numeric_columns
